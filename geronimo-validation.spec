@@ -1,4 +1,4 @@
-%_javapackages_macros
+%{?_javapackages_macros:%_javapackages_macros}
 %global spec_ver 1.0
 %global spec_name geronimo-validation_%{spec_ver}_spec
 
@@ -50,3 +50,37 @@ Javadoc for %{name}.
 
 %files javadoc -f .mfiles-javadoc
 %doc LICENSE NOTICE
+
+%changelog
+* Wed Sep 11 2013 Marek Goldmann <mgoldman@redhat.com> - 1.1-10
+- Removed javax.validation:validation-api alias, bean-validation-api is the RI
+
+* Sat Aug 17 2013 gil cattaneo <puntogil@libero.it> 1.1-9
+- fix rhbz#992345
+- use pom macros
+- minor changes to adapt to current guideline
+
+* Sat Aug 03 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.1-8
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
+
+* Wed Feb 13 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.1-7
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
+
+* Wed Feb 06 2013 Java SIG <java-devel@lists.fedoraproject.org> - 1.1-6
+- Update for https://fedoraproject.org/wiki/Fedora_19_Maven_Rebuild
+- Replace maven BuildRequires with maven-local
+
+* Thu Jul 19 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.1-5
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_18_Mass_Rebuild
+
+* Fri Jan 13 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.1-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+
+* Thu Nov 17 2011 Andy Grimm <agrimm@gmail.com> 1.1-3
+- add jpackage-utils dep for javadoc subpackage
+
+* Tue Oct 18 2011 Andy Grimm <agrimm@gmail.com> 1.1-2
+- add maven fragment mapping for javax.validation
+
+* Mon Oct 17 2011 Andy Grimm <agrimm@gmail.com> 1.1-1
+- Initial Build
