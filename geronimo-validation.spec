@@ -8,7 +8,7 @@ Release:        10.0%{?dist}
 Summary:        Geronimo implementation of JSR 303
 License:        ASL 2.0
 # should be http://geronimo.apache.org/
-URL:            http://apache.org/
+URL:            https://apache.org/
 # svn export https://svn.apache.org/repos/asf/geronimo/specs/tags/geronimo-validation_1.0_spec-1.1/
 # tar caf geronimo-validation_1.0_spec-1.1.tar.xz geronimo-validation_1.0_spec-1.1
 Source0:        %{spec_name}-%{version}.tar.xz
